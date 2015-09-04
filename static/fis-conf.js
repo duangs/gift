@@ -37,32 +37,32 @@ fis.match('**/*.png', {
 	optimizer: fis.plugin('png-compressor')
 });
 
-fis.match('html/{*,**/*}.tpl.php',{
-	release: '../application/views/$0'
+fis.match('html/{*,**/*}.tpl.html',{
+	release: '../public/$0'
 });
 
 fis.match('js/{*,**/*}.js',{
 	release: '../public/assets/$0',
 	url: '$0',
-	domain: '<?php echo $assets_url; ?>'
+	domain: 'http://www.gift.net/assets'
 });
 
 fis.match('css/{*,**/*}.css',{
 	release: '../public/assets/$0',
 	url: '$0',
-	domain: '<?php echo $assets_url; ?>'
+	domain: 'http://www.gift.net/assets'
 });
 
 fis.match('img/{*,**/*}.{png,jpg,ico,gif}',{
 	release: '../public/assets/$0',
 	url: '$0',
-	domain: '<?php echo $assets_url; ?>'
+	domain: 'http://www.gift.net/assets'
 });
 
-fis.match('bower_components/**/{dist,dest}/{**.js,**.png,**.jpg,**.css,**.map}',{
+fis.match('bower_components/**/{**.js,**.png,**.jpg,**.css,**.map}',{
 	release: '../public/assets/$0',
 	url: '$0',
-	domain: '<?php echo $assets_url; ?>'
+	domain: 'http://www.gift.net/assets'
 });
 
 fis.match('bower_components/**/fonts/**',{
